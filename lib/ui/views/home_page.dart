@@ -1,4 +1,5 @@
 import 'package:demo/ui/routing/route.dart';
+import 'package:demo/ui/view-models/home_view_model.dart';
 import 'package:demo/ui/views/card_list_view.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 40),
             TextButton(
               onPressed: () {
-                Navigator.of(context).pushNamed(Routes.cardListViewRoute);
+                HomeViewModel().navigateToCardsView();
+                // Navigator.of(context).pushNamed(Routes.cardListViewRoute);
                 // Navigator.of(context).push(
                 //   MaterialPageRoute(
                 //     builder: (_) => const CardListView(),

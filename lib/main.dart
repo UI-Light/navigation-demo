@@ -1,3 +1,4 @@
+import 'package:demo/ui/handlers/navigation_handler.dart';
 import 'package:demo/ui/routing/route_generator.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: NavigationHandler.instance.navigatorKey,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
